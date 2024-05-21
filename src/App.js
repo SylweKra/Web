@@ -4,15 +4,30 @@ import HomeCard from './components/Home_Card'
 import Seconda from './components/seconda'
 import image1 from './Images/obbiettivi.webp'
 import image2 from './Images/canong.png'
-
+import { useEffect, useState } from "react";
 
 
 function App() {
   const topFunction = () => {
     window.scrollTo(0, 0);
+  
   }
 
-  
+  const [prodotti, setProdotti] = useState(false);
+
+  function getProdotti() {
+    fetch('http://localhost:3001')
+      .then(response => {
+        return response.text();
+      })
+      .then(data => {
+        setProdotti(data);
+      });
+  }
+
+  useEffect(() => {
+    getProdotti();
+  }, []);
 
   return (
     <>
@@ -42,7 +57,12 @@ function App() {
           <Seconda  />
           <div id='spazio'></div>
         </div>
+        
       </div>
+
+      {prodotti ? prodotti : 'There is no product data available'}
+
+      
         
     </>
   );
