@@ -29,6 +29,13 @@ function App() {
     getProdotti();
   }, []);
 
+
+
+
+
+
+
+  
   return (
     <>
 
@@ -40,7 +47,7 @@ function App() {
       <div className="container-fluid p-0 m-0">
         
         <VideoC />
-        <h1 id='Titolo_Home_Page'>Benvenuto nel nostro sito</h1>
+       
       </div>
       
      
@@ -49,7 +56,7 @@ function App() {
       <div onClick={topFunction} id="Scrollup"><i className="bi bi-arrow-up-square"></i></div> 
 
       <div id="sfondoparte2" classname="m-0 p-0">
-        <div id="container_caru" className='card-container'>
+        <div id="container_card" className='card-container'>
           <HomeCard  />
           <div id='spazio'></div>
         </div>
@@ -57,7 +64,7 @@ function App() {
           <Seconda  />
           <div id='spazio'></div>
         </div>
-        
+
       </div>
 
       {prodotti ? prodotti : 'There is no product data available'}
