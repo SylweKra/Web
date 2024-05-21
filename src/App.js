@@ -1,6 +1,7 @@
 import Navbar from './components/navbar'
 import VideoC from './components/VideoSfondo'
 import HomeCard from './components/Home_Card'
+import Seconda from './components/seconda'
 import image1 from './Images/obbiettivi.webp'
 import image2 from './Images/canong.png'
 
@@ -33,8 +34,12 @@ function App() {
       <div onClick={topFunction} id="Scrollup"><i className="bi bi-arrow-up-square"></i></div> 
 
       <div id="sfondoparte2" classname="m-0 p-0">
-        <div id="container_card" className='card-container'>
+        <div id="container_caru" className='card-container'>
           <HomeCard  />
+          <div id='spazio'></div>
+        </div>
+        <div id="container_card2" className='card-container'>
+          <Seconda  />
           <div id='spazio'></div>
         </div>
       </div>
